@@ -1,4 +1,4 @@
-"""
+
 def strings(string_1,string_2):
     string_1 = str(string_1)
     string_2 = str(string_2)
@@ -17,9 +17,11 @@ while i < 4:
     string_2 = input('Please enter second letter: ')    
     print(strings(string_1,string_2))
     i += 1
-    """
+
 try:
     age = int(input('Введите ваш возраст: '))
+    except ValueError:
+    print("Incorrect age,try again")
     if age <= 0:
         print('Возраст не может быть меньше 0')
     elif  age <= 7:
@@ -32,5 +34,3 @@ try:
         print('Ты должен работать')
     else:
         print('Неправильный ввод,попробуйте еще')
-except ValueError:
-    print("Incorrect age,try again")
